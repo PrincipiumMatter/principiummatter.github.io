@@ -2,136 +2,217 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Principium Matter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #0f1115;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0b0e14;
       color: #ffffff;
-      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 15px 40px;
+      background: rgba(11,14,20,0.9);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    nav .brand {
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #cfd3da;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: #4f7cff;
+    }
+
+    /* SECTIONS */
+    section {
+      min-height: 100vh;
+      padding: 120px 20px 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
 
     .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 60px 20px;
+      max-width: 900px;
     }
 
-    header {
-      text-align: center;
-      margin-bottom: 80px;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      letter-spacing: 1px;
+    h1 {
+      font-size: 3.2rem;
       margin-bottom: 10px;
     }
 
-    header p {
-      font-size: 1.2rem;
-      color: #b0b3b8;
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #d1d5db;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .tagline {
       font-style: italic;
+      color: #b7bbc2;
+      margin-bottom: 40px;
     }
 
-    section {
-      margin-bottom: 70px;
+    /* HERO */
+    .logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px solid #4f7cff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 30px;
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #4f7cff;
     }
 
-    section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-      border-left: 4px solid #4f7cff;
-      padding-left: 12px;
-    }
-
-    section p {
-      color: #d1d3d6;
-      max-width: 800px;
-    }
-
-    .divisions {
+    /* DIVISIONS */
+    .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 25px;
-      margin-top: 30px;
+      margin-top: 40px;
     }
 
     .card {
-      background-color: #161a22;
-      padding: 25px;
-      border-radius: 10px;
+      background-color: #131824;
+      padding: 30px;
+      border-radius: 14px;
       transition: transform 0.2s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
     }
 
     .card h3 {
       margin-top: 0;
-      margin-bottom: 10px;
       color: #4f7cff;
     }
 
+    /* FOOTER */
     footer {
       text-align: center;
-      padding: 30px 20px;
-      background-color: #0b0d12;
-      color: #8a8d91;
-      font-size: 0.9rem;
+      padding: 30px;
+      font-size: 0.85rem;
+      color: #7f8490;
+      background-color: #07090d;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="brand">Principium Matter</div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#philosophy">Philosophy</a>
+      <a href="#divisions">Divisions</a>
+      <a href="#direction">Direction</a>
+    </div>
+  </nav>
 
-    <header>
+  <!-- HERO -->
+  <section id="home">
+    <div class="container">
+      <div class="logo">PM</div>
       <h1>Principium Matter</h1>
-      <p>the core of all things</p>
-    </header>
-
-    <section>
-      <h2>About</h2>
+      <div class="tagline">the core of all things</div>
       <p>
-        Principium Matter is a parent organization built on the idea of fundamentals.
-        We operate across multiple domains, creating platforms and initiatives that
-        focus on clarity, innovation, and meaningful impact.
+        A parent organization built on foundational ideas,
+        shaping platforms across technology, information, and media.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <section>
+  <!-- PHILOSOPHY -->
+  <section id="philosophy">
+    <div class="container">
+      <h2>Our Philosophy</h2>
+      <p>
+        Every system, idea, and innovation begins with a core.
+        Principium Matter exists to explore and build upon those
+        fundamentals — creating clarity in complexity and purpose
+        in progress.
+      </p>
+    </div>
+  </section>
+
+  <!-- DIVISIONS -->
+  <section id="divisions">
+    <div class="container">
       <h2>Our Divisions</h2>
 
-      <div class="divisions">
+      <div class="cards">
         <div class="card">
           <h3>Principium Tech</h3>
-          <p>Technology, software, and digital innovation.</p>
+          <p>Technology, software, and digital infrastructure.</p>
         </div>
 
         <div class="card">
-          <h3>Principium Info</h3>
-          <p>Knowledge, research, media, and information systems.</p>
+          <h3>Principium Information</h3>
+          <p>Knowledge platforms, research, and information systems.</p>
         </div>
 
         <div class="card">
           <h3>Principium Media</h3>
-          <p>Content, storytelling, and creative communication.</p>
+          <p>Content, storytelling, and communication.</p>
         </div>
 
         <div class="card">
           <h3>Principium Labs</h3>
-          <p>Experimental ideas, research, and future projects.</p>
+          <p>Experimental ideas and future initiatives.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </div>
+  <!-- DIRECTION -->
+  <section id="direction">
+    <div class="container">
+      <h2>Direction</h2>
+      <p>
+        We focus on long-term thinking, ethical innovation,
+        and meaningful impact. Our role is not to follow trends,
+        but to understand the principles behind them.
+      </p>
+    </div>
+  </section>
 
   <footer>
     © 2026 Principium Matter · All rights reserved
